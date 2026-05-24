@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI 领航员 - 17Win</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on AI 领航员 - 17Win</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 23 May 2026 10:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>友情链接</title>
+      <link>http://localhost:1313/friend-links/</link>
+      <pubDate>Sat, 23 May 2026 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/friend-links/</guid>
+      <description>&lt;!-- 这个页面内容来自 data/friends.yml --&gt;</description>
+    </item>
+    <item>
+      <title>关于 AI 领航员</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Fri, 22 May 2026 10:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;-我们的使命&#34;&gt;🌟 我们的使命&lt;/h2&gt;&#xA;&lt;p&gt;在 AI 技术爆炸式发展的今天，每天都有新的工具问世，从业者和普通用户往往陷入“信息过载”的困境。&lt;strong&gt;AI 领航员&lt;/strong&gt; 应运而生 —— 我们致力于打造最专业、最实用的 AI 工具导航平台。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

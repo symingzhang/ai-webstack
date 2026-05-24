@@ -1,0 +1,21 @@
+# data/friends.yml
+- category: "⭐ 精选推荐"
+  description: "优质导航站点，互相推荐"
+  links:
+    - name: "WebStack-Hugo 官网"
+      url: "https://webstack.hugo.owenyoung.com/"
+      avatar: "https://webstack.hugo.owenyoung.com/logo.png"
+      description: "WebStack-Hugo 主题官方演示站"
+      
+    - name: "优秀资源导航"
+      url: "https://hao.uisdc.com/"
+      avatar: "https://hao.uisdc.com/favicon.ico"
+      description: "UI中国旗下设计资源导航"
+
+- category: "🤖 AI 伙伴"
+  description: "AI 领域的优秀同行"
+  links:
+    - name: "AI 工具集"
+      url: "https://ai-bot.cn/"
+      avatar: "https://ai-bot.cn/favicon.ico"
+      description: "中文 AI 工具大全"

@@ -1,0 +1,363 @@
+{{ define "main" }}
+<div class="page-wrapper">
+    <div class="page-header">
+        <h1>友情链接</h1>
+        <p class="page-description">发现更多优质网站，欢迎交换链接</p>
+    </div>
+
+    <!-- 友链申请说明卡片 -->
+    <div class="friends-info-grid">
+        <div class="info-card">
+            <h3>📝 友链申请标准</h3>
+            <ul>
+                <li>✅ 网站内容与 AI、科技、效率工具相关</li>
+                <li>✅ 网站已稳定运行 3 个月以上</li>
+                <li>✅ 日访问量 ≥ 500 IP（新站可酌情放宽）</li>
+                <li>❌ 不接受纯采集站、违规站、境外赌博站</li>
+            </ul>
+        </div>
+        <div class="info-card">
+            <h3>🤝 申请方式</h3>
+            <p>填写以下信息发送至 <code>links@17win.fun</code></p>
+            <pre>
+站点名称：
+站点链接：
+站点简介：
+联系邮箱：</pre>
+            <p>我们会在 3 个工作日内审核并回复。</p>
+        </div>
+    </div>
+
+    <!-- 动态加载友链数据 -->
+    {{ $friendsData := site.Data.friends }}
+    {{ if $friendsData }}
+        {{ range $friendsData }}
+        <div class="friend-category">
+            <h2 class="category-title">
+                <span class="category-icon">{{ .category | safeHTML }}</span>
+            </h2>
+            {{ if .description }}
+                <p class="category-desc">{{ .description }}</p>
+            {{ end }}
+            <div class="friend-grid">
+                {{ range .links }}
+                <a href="{{ .url }}" 
+                   class="friend-card" 
+                   target="_blank" 
+                   rel="noopener noreferrer nofollow"
+                   title="{{ .description }}">
+                    <div class="friend-avatar">
+                        {{ if and .avatar (ne .avatar "") }}
+                            <img src="{{ .avatar }}" alt="{{ .name }}" loading="lazy" 
+                                 onerror="this.onerror=null; this.parentElement.innerHTML='<div class=avatar-placeholder>{{ substr .name 0 1 }}</div>'">
+                        {{ else }}
+                            <div class="avatar-placeholder">
+                                {{ substr .name 0 1 }}
+                            </div>
+                        {{ end }}
+                    </div>
+                    <div class="friend-info">
+                        <h3 class="friend-name">{{ .name }}</h3>
+                        <p class="friend-desc">{{ .description }}</p>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    {{ else }}
+        <div class="no-data">
+            <p>✨ 暂无友情链接，欢迎申请添加 ~</p>
+        </div>
+    {{ end }}
+</div>
+
+<style>
+/* ========== 页面整体样式 ========== */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-description {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* ========== 信息卡片区域 ========== */
+.friends-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.info-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.info-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.info-card ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.info-card li {
+    margin: 0.5rem 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-card pre {
+    background: #e9ecef;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    margin: 0.75rem 0;
+}
+
+.info-card code {
+    background: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+/* ========== 友链分类样式 ========== */
+.friend-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #4a90e2;
+    display: inline-block;
+}
+
+.category-icon {
+    font-weight: 600;
+}
+
+.category-desc {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ========== 友链网格布局 ========== */
+.friend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+/* ========== 友链卡片样式 ========== */
+.friend-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.friend-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    border-color: #4a90e2;
+    background: #fafafa;
+}
+
+/* 头像区域 */
+.friend-avatar {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.friend-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* 友链信息区域 */
+.friend-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.friend-name {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.friend-desc {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 空数据样式 */
+.no-data {
+    text-align: center;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 16px;
+    color: #999;
+}
+
+/* ========== 暗色模式适配 ========== */
+@media (prefers-color-scheme: dark) {
+    .info-card {
+        background: #2a2a2a;
+    }
+    
+    .info-card h3 {
+        color: #eee;
+    }
+    
+    .info-card li,
+    .info-card p {
+        color: #bbb;
+    }
+    
+    .info-card pre,
+    .info-card code {
+        background: #1e1e1e;
+        color: #ddd;
+    }
+    
+    .friend-card {
+        background: #2a2a2a;
+        border-color: #3a3a3a;
+    }
+    
+    .friend-card:hover {
+        background: #333;
+        border-color: #4a90e2;
+    }
+    
+    .friend-name {
+        color: #eee;
+    }
+    
+    .friend-desc {
+        color: #999;
+    }
+    
+    .category-desc,
+    .page-description {
+        color: #aaa;
+    }
+    
+    .friend-avatar {
+        background: #1e1e1e;
+    }
+    
+    .no-data {
+        background: #2a2a2a;
+        color: #777;
+    }
+}
+
+/* ========== 移动端适配 ========== */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 1rem;
+    }
+    
+    .friend-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .friends-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .category-title {
+        font-size: 1.2rem;
+    }
+    
+    .friend-card {
+        padding: 0.8rem;
+    }
+    
+    .friend-avatar {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .friend-name {
+        font-size: 0.9rem;
+    }
+}
+</style>
+{{ end }}

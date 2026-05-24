@@ -1,0 +1,221 @@
+# ==========================================
+# AI一起赢 - 导航站配置（PNG图标版）
+# 域名：ai.17win.fun
+# 图标来源：LobeHub Icons（本地 PNG）
+# ==========================================
+
+- taxonomy: 🔥 热门推荐
+  icon: fas fa-fire fa-lg
+  list:
+    - term: 精选AI工具
+      links:
+        - title: Notion
+          logo: /notion.png
+          url: https://www.notion.so/
+          description: 一站式知识库+AI写作，团队协作神器
+        
+        - title: Copy.ai
+          logo: /copyai-color.png
+          url: https://www.copy.ai/
+          description: 10秒生成营销文案，支持25+种语言
+        
+        - title: DeepSeek
+          logo: /deepseek-color.png
+          url: https://www.deepseek.com/
+          description: 中文理解精准，完全免费，支持长文档处理
+        
+        - title: ChatGPT
+          logo: /chatgpt.png
+          url: https://chat.openai.com/
+          description: OpenAI开发，全球最受欢迎的AI助手
+
+- taxonomy: 💬 AI对话助手
+  icon: fas fa-comments fa-lg
+  list:
+    - term: 中文首选
+      links:
+        - title: DeepSeek
+          logo: /deepseek-color.png
+          url: https://www.deepseek.com/
+          description: 中文理解精准，完全免费，支持长文档处理
+        
+        - title: Kimi Chat
+          logo: /kimi.png
+          url: https://kimi.moonshot.cn/
+          description: 超长上下文200万字，免费使用
+        
+        - title: 豆包AI
+          logo: /doubao-color.png
+          url: https://www.doubao.com/
+          description: 字节跳动旗下，每日50次免费调用
+        
+        - title: 通义千问
+          logo: /qwen-color.png
+          url: https://tongyi.aliyun.com/
+          description: 阿里巴巴旗下大语言模型
+    
+    - term: 国际主流
+      links:
+        - title: ChatGPT
+          logo: /chatgpt.png
+          url: https://chat.openai.com/
+          description: OpenAI开发，全球最受欢迎的AI助手
+        
+        - title: Claude
+          logo: /claude-color.png
+          url: https://claude.ai/
+          description: Anthropic开发，安全可靠
+        
+        - title: Gemini
+          logo: /gemini-color.png
+          url: https://gemini.google.com/
+          description: Google旗下多模态AI模型
+
+- taxonomy: ✍️ AI写作工具
+  icon: fas fa-pen-fancy fa-lg
+  list:
+    - term: 文案生成
+      links:
+        - title: Copy.ai
+          logo: /copyai-color.png
+          url: https://www.copy.ai/
+          description: 10秒生成营销文案，支持25+种语言
+        
+        - title: Jasper
+          logo: /jasper-color.png
+          url: https://www.jasper.ai/
+          description: 专业AI写作助手，一键生成博客、广告、邮件
+        
+        - title: Writesonic
+          logo: /writesonic-color.png
+          url: https://writesonic.com/
+          description: 全能AI写作，文章、广告、产品描述全覆盖
+        
+        - title: Rytr
+          logo: /rytr-color.png
+          url: https://rytr.me/
+          description: 轻量级AI内容生成，适合快速写作
+    
+    - term: 辅助工具
+      links:
+        - title: Grammarly
+          logo: /grammarly-color.png
+          url: https://www.grammarly.com/
+          description: 语法检查与润色
+        
+        - title: QuillBot
+          logo: /quillbot-color.png
+          url: https://quillbot.com/
+          description: AI改写与段落重述
+
+- taxonomy: 💻 AI编程工具
+  icon: fas fa-code fa-lg
+  list:
+    - term: 智能编程助手
+      links:
+        - title: Cursor
+          logo: /cursor-color.png
+          url: https://cursor.sh/
+          description: AI驱动的代码编辑器，支持自然语言编程
+        
+        - title: GitHub Copilot
+          logo: /github-color.png
+          url: https://github.com/features/copilot
+          description: 微软出品，AI编程助手标杆
+        
+        - title: Codeium
+          logo: /codeium-color.png
+          url: https://codeium.com/
+          description: 完全免费的AI编程插件
+        
+        - title: Tabnine
+          logo: /tabnine-color.png
+          url: https://www.tabnine.com/
+          description: AI代码补全工具
+
+- taxonomy: 🎨 AI绘画设计
+  icon: fas fa-palette fa-lg
+  list:
+    - term: 图像生成
+      links:
+        - title: Midjourney
+          logo: /midjourney-color.png
+          url: https://www.midjourney.com/
+          description: 顶级AI图像生成工具，以艺术风格著称
+        
+        - title: Stable Diffusion
+          logo: /stability-color.png
+          url: https://stability.ai/
+          description: 开源AI绘画模型
+        
+        - title: Leonardo.ai
+          logo: /leonardo-color.png
+          url: https://leonardo.ai/
+          description: 免费额度充足，适合新手
+        
+        - title: DALL·E 3
+          logo: /openai-color.png
+          url: https://openai.com/dall-e-3
+          description: OpenAI的图像生成模型
+    
+    - term: 国内工具
+      links:
+        - title: 即梦AI
+          logo: /jimeng-color.png
+          url: https://jimeng.jianying.com/
+          description: 字节跳动旗下，支持中文生成
+        
+        - title: 文心一格
+          logo: /wenxin-color.png
+          url: https://yige.baidu.com/
+          description: 百度AI绘画平台
+
+- taxonomy: 🎬 AI视频工具
+  icon: fas fa-video fa-lg
+  list:
+    - term: 视频生成
+      links:
+        - title: 可灵AI (Kling)
+          logo: /kling-color.png
+          url: https://kling.kuaishou.com/
+          description: 快手旗下，1分钟生成1080P视频
+        
+        - title: Runway
+          logo: /runway-color.png
+          url: https://runwayml.com/
+          description: 专业级AI视频编辑
+        
+        - title: Pika Labs
+          logo: /pika-color.png
+          url: https://pika.art/
+          description: 文字/图片生成视频
+        
+        - title: Synthesia
+          logo: /synthesia-color.png
+          url: https://www.synthesia.io/
+          description: AI虚拟人视频生成，支持120+种语言
+
+- taxonomy: 📊 效率办公
+  icon: fas fa-tasks fa-lg
+  list:
+    - term: 协作与知识库
+      links:
+        - title: Notion
+          logo: /notion.png
+          url: https://www.notion.so/
+          description: 一站式知识库+AI写作
+        
+        - title: Gamma
+          logo: /gamma-color.png
+          url: https://gamma.app/
+          description: AI生成PPT/文档/网页
+        
+        - title: Tome
+          logo: /tome-color.png
+          url: https://tome.app/
+          description: AI叙事工具，生成故事和演示文稿
+        
+        - title: Beautiful.ai
+          logo: /beautifulai-color.png
+          url: https://www.beautiful.ai/
+          description: AI智能PPT制作
