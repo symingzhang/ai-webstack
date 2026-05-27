@@ -99,12 +99,12 @@
     - term: 辅助工具
       links:
         - title: Grammarly
-          logo: /grammarly-color.png
+          logo: /grammarly.png
           url: https://www.grammarly.com/
           description: 语法检查与润色
         
         - title: QuillBot
-          logo: /quillbot-color.png
+          logo: /quillbot.png
           url: https://quillbot.com/
           description: AI改写与段落重述
 
@@ -114,17 +114,17 @@
     - term: 智能编程助手
       links:
         - title: Cursor
-          logo: /cursor-color.png
+          logo: /cursor.png
           url: https://cursor.sh/
           description: AI驱动的代码编辑器，支持自然语言编程
         
         - title: GitHub Copilot
-          logo: /github-color.png
+          logo: /githubcopilot-color.png
           url: https://github.com/features/copilot
           description: 微软出品，AI编程助手标杆
         
         - title: Codeium
-          logo: /codeium-color.png
+          logo: /codeium.png
           url: https://codeium.com/
           description: 完全免费的AI编程插件
         
